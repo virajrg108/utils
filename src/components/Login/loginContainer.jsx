@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 
 import Login from './login';
+import history from '../../history'
 
 const mapStateToProps = (state) => {
   return {
@@ -13,6 +14,7 @@ const mapDispatchToProps = (dispatch) => {
     setUser: (username) => {
       dispatch({username, type: 'SET_USER' });
       console.log("container reached!!");
+      history.push('/home');
     }
   }
 }

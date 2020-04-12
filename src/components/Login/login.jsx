@@ -1,5 +1,8 @@
 import React from "react"
 import { Button } from "antd"
+
+import history from '../../history';
+
 class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -8,9 +11,17 @@ class Login extends React.Component {
     handleClick = e => {
         this.props.setUser("viraj");
     }
-    // componentDidMount (){
-        
-    // }
+    componentDidMount() {
+        fetch("http://localhost:8080")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    console.log("result : ", result)
+                },
+                (error) => {
+                }
+            )
+    }
     render() {
         return (
             <div>
