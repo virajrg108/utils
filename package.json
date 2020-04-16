@@ -24,7 +24,8 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test"
+    "test": "react-app-rewired test",
+    "sass": "sass --watch src/scss/app.scss:src/css/app.css --style compressed"
   },
   "eslintConfig": {
     "extends": "react-app"
