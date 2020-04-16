@@ -2,7 +2,7 @@ import React from 'react';
 import { DatePicker, Button } from 'antd';
 import { Router, Route } from "react-router-dom";
 
-import './App.css';
+// import './App.css';
 import './css/app.css';
 import LoginContainer from "./components/Login/loginContainer";
 import HomeContainer from "./components/Home/homeContainer";

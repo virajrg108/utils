@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Input } from "antd"
+import { Button, Input, Row, Col, Divider } from "antd"
 import axios from 'axios'
 
 import history from '../../history';
@@ -30,11 +30,14 @@ class Login extends React.Component {
     }
     render() {
         return (
-            <div>
-                <Input value={this.state.name} onChange={this.handleChange} id="name" placeholder="Username" /><br/><br/>
-                <Input.Password value={this.state.pass} onChange={this.handleChange} id="pass" placeholder="Password" /><br/><br/>
-                <Button onClick={this.handleClick} type="primary">Set user</Button>
-            </div>
+            <Row className="login-wrapper" justify="space-around" align="middle">
+                <Col className="login" xl={{span:5}} lg={{span:8}} xs={{span:18}}  md={{span:7}}>
+                    <div className="title">LOGIN</div>
+                    <Input value={this.state.name} onChange={this.handleChange} id="name" placeholder="Username" /><br/><br/>
+                    <Input.Password value={this.state.pass} onChange={this.handleChange} id="pass" placeholder="Password" /><br/><br/>
+                    <Button onClick={this.handleClick} type="primary">SUBMIT</Button>
+                </Col>
+            </Row>
         )
     }
 }
